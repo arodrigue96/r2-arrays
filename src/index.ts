@@ -9,3 +9,5 @@ const age = askUser("Enter your age: ");
 
 // Borra todo este código menos la línea 1
 // y no borres el archivo askUser.ts, que es el que contiene la función askUser
+
+console.log("Hola mundo");
