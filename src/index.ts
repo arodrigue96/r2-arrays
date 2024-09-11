@@ -18,14 +18,13 @@ const songTitles = [
 const songPosition = askUser(
   `Dime que canción quieres visualizar, para ello debes indicarme un número del 1 al ${songTitles.length}: `
 );
-const songPositionToNumber = +songPosition;
 
-if (songPositionToNumber === 0 || songPositionToNumber > songTitles.length) {
+if (+songPosition === 0 || +songPosition > songTitles.length) {
   console.log("La posición indicada NO es correcta.");
 } else {
   console.log(
     `La canción que corresponde a la posición mencionada es: ${
-      songTitles[songPositionToNumber - 1]
+      songTitles[+songPosition - 1]
     }`
   );
 }
