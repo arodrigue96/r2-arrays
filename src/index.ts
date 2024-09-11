@@ -15,20 +15,17 @@ const songTitles = [
   "Rolling in the Deep",
   "Blinding Lights",
 ];
-const askSongsToUser = askUser(
+const songPosition = askUser(
   `Dime que canción quieres visualizar, para ello debes indicarme un número del 1 al ${songTitles.length}: `
 );
-const askSongsToUserToNumber = +askSongsToUser;
+const songPositionToNumber = +songPosition;
 
-if (
-  askSongsToUserToNumber === 0 ||
-  askSongsToUserToNumber > songTitles.length
-) {
+if (songPositionToNumber === 0 || songPositionToNumber > songTitles.length) {
   console.log("La posición indicada NO es correcta.");
 } else {
   console.log(
     `La canción que corresponde a la posición mencionada es: ${
-      songTitles[askSongsToUserToNumber - 1]
+      songTitles[songPositionToNumber - 1]
     }`
   );
 }
