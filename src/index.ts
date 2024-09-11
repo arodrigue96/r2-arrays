@@ -5,7 +5,7 @@ console.log(
 );
 
 const songTitles = [
-  "LISTA DE CANCIONES:",
+  "As It Was",
   "Bohemian Rhapsody",
   "Imagine",
   "Hotel California",
@@ -16,19 +16,19 @@ const songTitles = [
   "Blinding Lights",
 ];
 const askSongsToUser = askUser(
-  `Dime que canción quieres visualizar, para ello debes indicarme un número del 1 al ${
-    songTitles.length - 1
-  }: `
+  `Dime que canción quieres visualizar, para ello debes indicarme un número del 1 al ${songTitles.length}: `
 );
 const askSongsToUserToNumber = +askSongsToUser;
 
 if (
   askSongsToUserToNumber === 0 ||
-  askSongsToUserToNumber >= songTitles.length
+  askSongsToUserToNumber > songTitles.length
 ) {
   console.log("La posición indicada NO es correcta.");
 } else {
   console.log(
-    `La canción que corresponde a la posición mencionada es: ${songTitles[askSongsToUserToNumber]}`
+    `La canción que corresponde a la posición mencionada es: ${
+      songTitles[askSongsToUserToNumber - 1]
+    }`
   );
 }
